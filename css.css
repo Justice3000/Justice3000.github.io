@@ -9,6 +9,7 @@ body {
     height: 100%;
     background: linear-gradient(180deg, #ffbfbf 0%, #c20000 51%, #200202 75%);
     max-width: 100%;
+    
 }
 
 @keyframes gradient {
@@ -36,12 +37,12 @@ body {
 
 .card-img{
     opacity: 0.5;
-    transition: 3s;
+    transition: 8s;
     
 }
 
 .card-img:hover {
-    transition: 3s;
+    transition: 2s;
     opacity: 1;
   
     filter: invert(9%) sepia(97%) saturate(7469%) hue-rotate(352deg) brightness(92%) contrast(119%);
@@ -52,6 +53,7 @@ body {
 #laserDanger{
     filter: grayscale(100%);
     opacity: 0.1;
+    transition: 8s;
 }
 
 #laserDanger:hover{
@@ -62,6 +64,7 @@ body {
 #qlimax {
     filter: invert(100%);
     opacity: 0.1;
+    transition: 8s;
 }
 
 #qlimax:hover {
