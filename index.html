@@ -9,29 +9,43 @@
     <title>Dani</title>
 </head>
 <body>
-    
+  
 
-    <nav class="navbar navbar-expand-md navbar-light transparent ">
+    <nav class="navbar navbar-expand-md navbar-dark transparent ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#">Daumantas Dani Indreika <i onclick='playMe()' class="fas fa-music"></i></a>
+          <a id="secret" class="navbar-brand" href="#">Daumantas Dani Indreika</a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#mask">About Me <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Me</a>
+              <a class="nav-link" href="#web">WEB</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#laser" tabindex="-1" aria-disabled="true">Laser</a>
+              <a class="nav-link" href="#stag" tabindex="-1" aria-disabled="true">Skills</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#laser" tabindex="-1" aria-disabled="true">Hobby</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#qlimax" tabindex="-1" aria-disabled="true">Lifestyle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#git" tabindex="-1" aria-disabled="true">GitHub</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cv" tabindex="-1" aria-disabled="true">CV</a>
+            </li>
+
           </ul>
        
         </div>
+       
       </nav> 
- 
+      <div class="progress-bar" id='indicator'></div>
 
 
 
@@ -39,13 +53,13 @@
       <div class="card mb-3" style="max-width: 640px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img id="mask" src="mask.png" class="card-img" alt="...">
+            <img id="mask" src="img/mask.png" class="card-img" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title" id="card-titleMe">My name is Dani</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.Ye yes yes here we go.</p>
-              <p class="card-text"><small class="text-muted">This is how 79 out of 100 looks like </small></p>
+              <h5 class="card-title " id="card-titleMe">People call me Dani</h5>
+              <p id="myNametxt" class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.Ye yes yes here we go.</p>
+              <p class="card-text"><small class="text-muted"><a href="">link</a></small></p>
             </div>
           </div>
         </div>
@@ -54,34 +68,30 @@
       <div class="card mb-3" style="max-width: 640px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="stag.png" class="card-img" alt="...">
+            
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title" id="card-titleMe">My name is Dani</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.Ye yes yes here we go.</p>
-              <p class="card-text"><small class="text-muted">This is how 79 out of 100 looks like </small></p>
+              <h5 class="card-title" id="card-titleMe"></h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small class="text-muted"></small></p>
             </div>
           </div>
         </div>
       </div>
       </div>
-    </div>
-  </div>
-
-    </div>
-
+    
     <div class="card-group justify-content-center">
       <div class="card mb-3" style="max-width: 640px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="web.png" class="card-img" alt="...">
+           
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title" id="card-titleMe">My name is Dani</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.Ye yes yes here we go.</p>
-              <p class="card-text"><small class="text-muted">This is how 79 out of 100 looks like </small></p>
+              <h5 class="card-title" id="card-titleMe"></h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small class="text-muted"></small></p>
             </div>
           </div>
         </div>
@@ -91,7 +101,7 @@
       <div class="card mb-3" style="max-width: 640px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="gitHub.png" class="card-img" alt="...">
+            <img id="web" src="img/web.png" class="card-img" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -104,11 +114,12 @@
       </div>
     </div>
 
+    
     <div class="card-group justify-content-center">
       <div class="card mb-3" style="max-width: 640px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="Qlimax-Logo-1.png" class="card-img" id='qlimax' alt="...">
+            <img id="stag" src="img/stag.png" class="card-img"  alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -125,7 +136,41 @@
       <div class="card mb-3" style="max-width: 640px;">
         <div class="row no-gutters">
           <div class="col-md-4"><a name="laser"></a>
-            <img src="laser.png" id='laserDanger' class="card-img" alt="..."></div>
+            </div>
+          
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title" id="card-titleMe"></h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group justify-content-center">
+      <div class="card mb-3" style="max-width: 640px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title" id="card-titleMe"></h5>
+              <p class="card-text"></p>
+              <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="card mb-3" style="max-width: 640px;">
+        <div class="row no-gutters">
+          <div class="col-md-4"><a name="laser"></a>
+            <img id="laser" src="img/laser.png" id='laserDanger' class="card-img" alt="..."></div>
           
           <div class="col-md-8">
             <div class="card-body">
@@ -136,19 +181,115 @@
           </div>
         </div>
       </div>
-      
-      
+       </div>
+ 
 
 
-    </div>
+       <div class="card-group justify-content-center">
+        <div class="card mb-3" style="max-width: 640px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="img/Qlimax-Logo-1.png" class="card-img" id='qlimax' alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" id="card-titleMe">My name is Dani</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.Ye yes yes here we go.</p>
+                <p class="card-text"><small class="text-muted">This is how 79 out of 100 looks like </small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  
+  
+        <div class="card mb-3" style="max-width: 640px;">
+          <div class="row no-gutters">
+            <div class="col-md-4"><a name="laser"></a>
+              </div>
+            
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" id="card-titleMe"></h5>
+                <p class="card-text"></p>
+                <p class="card-text"><small class="text-muted"></small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+         </div>
+
+         <div class="card-group justify-content-center">
+          <div class="card mb-3" style="max-width: 640px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+               
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title" id="card-titleMe"></h5>
+                  <p class="card-text"></p>
+                  <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+    
+          <div class="card mb-3" style="max-width: 640px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img id='git' src="img/gitHub.png" class="card-img" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title" id="card-titleMe">GitHub</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.Ye yes yes here we go.</p>
+                  <p class="card-text"><small class="text-muted"><a href="https://github.com/Justice3000">Go to my GitHub</a></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="card-group justify-content-center">
+          <div class="card mb-3" style="max-width: 640px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="img/cv.png" class="card-img" id='cv' alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title" id="card-titleMe">My name is Dani</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.Ye yes yes here we go.</p>
+                  <p class="card-text"><small class="text-muted">This is how 79 out of 100 looks like </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+    
+    
+          <div class="card mb-3" style="max-width: 640px;">
+            <div class="row no-gutters">
+              <div class="col-md-4"><a name="laser"></a>
+                </div>
+              
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title" id="card-titleMe"></h5>
+                  <p class="card-text"></p>
+                  <p class="card-text"><small class="text-muted"></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+           </div>
+
+    <button onclick="goUp()" id="upBtn" title="Go Up">UP</button>
 
 
-   
 
-       
-    <audio id='audio' controls src="drone4.mp3" loop></audio>
-
-    <button onclick="goUp()" id="upBtn" title="Go Up"><i class="fas fa-arrow-up"></i></button>
 
     <script src="js.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
