@@ -63,11 +63,11 @@ function scrollbar(){
 
       let Addition = document.getElementsByClassName('card-text')[0];
       Addition.innerHTML = ('I am here to tell you that you did find the secret!');
-      removeBtn();
+    
       
       localStorage.clear();
       localStorage.setItem('DaniSecret',"found");
-      
+      removeBtn();
 }
 
 //very ugly and mashed function for now, because just got some tips from teacher. Shall redo code in blocks for each step.
