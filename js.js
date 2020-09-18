@@ -63,6 +63,7 @@ function scrollbar(){
 
       let Addition = document.getElementsByClassName('card-text')[0];
       Addition.innerHTML = ('I am here to tell you that you did find the secret!');
+      removeBtn();
       
       localStorage.clear();
       localStorage.setItem('DaniSecret',"found");
