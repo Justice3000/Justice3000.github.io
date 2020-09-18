@@ -88,7 +88,7 @@ display: none; /* Hidden by default */
     filter: blur(3px) grayscale(100%) invert(10%);
 }
 
-.card:hover h5, .card:hover p{ 
+.card:hover h5, .card:hover p, .card:hover ul, .card:hover li, .card:hover th, .card:hover tr, .card:hover td { 
     filter: blur(0px);
     transition: 2s;
     transform: skewY(1deg);
@@ -123,4 +123,23 @@ display: none; /* Hidden by default */
 
 #dani h5, #dani p {
     filter: blur(0px);
+}
+
+.list-group li {
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    filter: blur(4px);
+    font-size: 1.4em;
+    color: whitesmoke;
+}
+
+.table th, .table tr, .table td {
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    filter: blur(4px);
+    font-size: 1em;
+    color: whitesmoke;
+   
 }

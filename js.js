@@ -2,16 +2,17 @@
 checkStorage();
 
 
-
+let secret = document.getElementById('secret');
+  secret.addEventListener('click', secretF);
 upBtn = document.getElementById("upBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
+
 window.onscroll = function() {
   scrollFunction();
   scrollbar();
 
 }
-
+// When the user scrolls down 20px from the top of the document, show the button
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     upBtn.style.display = "block";
@@ -31,8 +32,7 @@ function scrollbar(){
 
 
 
-let secret = document.getElementById('secret');
-  secret.addEventListener('click', secretF);
+
 
   function secretF(){
   let audio = new Audio('oth/drone4.mp3');
@@ -107,6 +107,7 @@ function goUp() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
 
 
 
