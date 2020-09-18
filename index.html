@@ -5,12 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css.css">
+    <!-- Using my fontawesome kit because its so easy to get some beautiful icons so quickly -->
     <script src="https://kit.fontawesome.com/0ab35d00e9.js" crossorigin="anonymous"></script>
     <title>Dani</title>
 </head>
 <body>
   
+<!-- The whole HTML part is based on bootstrap. 
+PROS:
+Already mobile friendly
+Already preformatted
+Basically no coding required to lets say to make a quick draft
+There is no need to worry about different web browsers
+CONS:
+Customizing might require extra CSS and specific selectors
+Dependency from outside
+*********************************************
+For a spastic like me and design sucker more time is needed to DECIDE what I want. Still I will totally re-do the whole thing.
 
+-->
     <nav class="navbar navbar-expand-md navbar-dark transparent ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -186,7 +199,7 @@
             <div class="card-body">
               <h5 class="card-title" id="card-titleMe">Work History</h5>
               <p class="card-text">
-                <table class="table">
+                <table id="tableG" class="table">
                   <thead>
                     <tr>
                       <th scope="col">Year Started</th>
@@ -399,7 +412,7 @@
               </div>
             </div>
           </div> 
-    <button onclick="goUp()" id="upBtn" title="Go Up">UP</button>
+    <button onclick="goUp()" id="upBtn" title="Go Up"><i class="fas fa-arrow-up"></i></button>
 
 
 

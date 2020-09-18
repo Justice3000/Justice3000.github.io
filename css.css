@@ -3,40 +3,23 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    /*background: linear-gradient(0deg,  #191d1e 50%,#283139 100%);*/
+    background-color: rgb(24, 7, 24);
     max-width: 100%;
-    
     background-image: url("img/stagB.webp");
     background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+
     background-attachment: fixed;
     background-repeat: no-repeat;
-
-   backdrop-filter: blur(3px) grayscale(80%);
-   
-    
+   backdrop-filter: blur(3px) grayscale(80%);  /* pretty new function might be not supported in many browsers. Looks like mozzila ignores it*/
 }
-
-
-
-/*.mb-3 *{
-    filter: blur(3px) grayscale(100%);
-}
-
-.mb-3:hover *{
-    filter:blur(0px);
-    transition: 2s;
-    opacity: 1;
-    filter: invert(100%) grayscale(100%);  
-    
-}*/
-
-
 
 .card {
     background-color: transparent;
-    border: none;
-    
-    
+    border: none;   
+
 }
 
 
@@ -44,15 +27,14 @@ body {
 
 .navbar {
     background-color: rgba(245, 245, 245, 0.089);
-
 }
 
-#upBtn {
+#upBtn { /* first time sticky button with js try. here are some annotations*/
 display: none; /* Hidden by default */
   position: sticky; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
-  left: 99vw;
-  z-index: 99; /* Make sure it does not overlap */
+  left: 99vw; /* relative position so no worries about different devices*/
+  z-index: 99; /* Make sure it does not overlap always visible */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color: rgba(125, 24, 192, 0.322); /* Set a background color */
@@ -77,6 +59,9 @@ display: none; /* Hidden by default */
 .card-title{
     color: white;
     filter: blur(3px) grayscale(100%);
+    -o-filter: blur(3px) grayscale(100%);
+    -moz-filter: blur(3px) grayscale(100%);
+    -webkit-filter: blur(3px) grayscale(100%);
 }
 .card-text {
     font-size: 1.4em;
@@ -87,7 +72,7 @@ display: none; /* Hidden by default */
     opacity: 0.5;
     filter: blur(3px) grayscale(100%) invert(10%);
 }
-
+/* one of those specific pointers to unblur stuff on many elements while pointing just on one of them. Cant really tell yet if its possible to make this list shorter, because it seems that bootsrap requires pretty narrow identifiers from me to override theirs. awoiding !important at all costs*/
 .card-group:hover h5, .card-group:hover p, .card-group:hover ul, .card-group:hover li, .card-group:hover th, .card-group:hover tr, .card-group:hover td { 
     filter: blur(0px);
     transition: 2s;
@@ -98,7 +83,7 @@ display: none; /* Hidden by default */
     filter: blur(0px) invert(100%);
     transition: 2s;
     transform: skewY(5deg);
-    
+   /* down below just more specific CSS dependant on the items*/ 
     
 } 
 
