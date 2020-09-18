@@ -88,12 +88,12 @@ display: none; /* Hidden by default */
     filter: blur(3px) grayscale(100%) invert(10%);
 }
 
-.card:hover h5, .card:hover p, .card:hover ul, .card:hover li, .card:hover th, .card:hover tr, .card:hover td { 
+.card-group:hover h5, .card-group:hover p, .card-group:hover ul, .card-group:hover li, .card-group:hover th, .card-group:hover tr, .card-group:hover td { 
     filter: blur(0px);
     transition: 2s;
     transform: skewY(1deg);
 }
-.card:hover img {
+.card-group:hover img {
     opacity: 1;
     filter: blur(0px) invert(100%);
     transition: 2s;
@@ -102,7 +102,7 @@ display: none; /* Hidden by default */
     
 } 
 
-.card:hover #laser {
+.card-group:hover #laser {
     opacity: 1;
     filter: blur(0px) invert(0%);
     transition: 4s;
@@ -114,7 +114,7 @@ display: none; /* Hidden by default */
     filter: blur(0px) grayscale(100%) invert(100%);
 }
 
-.card:hover #mask {
+.card-group:hover #mask {
     opacity: 1;
     filter: blur(0px) invert(100%);
     transition: 2s;
