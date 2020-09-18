@@ -1,9 +1,5 @@
 body {
-  
-  /* background: linear-gradient(-90deg, #000000,#ffffff);
-	background-size: 1000% 1000%;
-	animation: gradient 15s ease infinite;
-    */
+ 
     margin: 0;
     padding: 0;
     height: 100%;
@@ -20,67 +16,31 @@ body {
     
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
 
-.mb-3 *{
-    filter: blur(3px);
+
+/*.mb-3 *{
+    filter: blur(3px) grayscale(100%);
 }
 
 .mb-3:hover *{
     filter:blur(0px);
     transition: 2s;
     opacity: 1;
-    filter: invert(100%)  hue-rotate(352deg) brightness(92%) contrast(119%);
+    filter: invert(100%) grayscale(100%);  
     
-}
+}*/
+
+
 
 .card {
     background-color: transparent;
     border: none;
     
-}
-.card-title{
-    color: white;
-}
-.card-text {
-    font-size: 1.5em;
-    color: whitesmoke;
-}
-
-.card-img{
-    opacity: 0.5;
-    transition: 8s;
-    filter: invert(10%)
     
 }
 
 
-#laserDanger{
-    filter: grayscale(100%);
-   
-}
 
-#laserDanger:hover{
-    filter: grayscale(0%);
-   
-}
-
-
-
-audio {
-    margin: 0 auto; display: block;
-  
-}
 
 .navbar {
     background-color: rgba(245, 245, 245, 0.089);
@@ -113,4 +73,54 @@ display: none; /* Hidden by default */
   }
 
 
- 
+
+.card-title{
+    color: white;
+    filter: blur(3px) grayscale(100%);
+}
+.card-text {
+    font-size: 1.4em;
+    color: whitesmoke;
+    filter: blur(3px) grayscale(100%);
+}
+.card-img{
+    opacity: 0.5;
+    filter: blur(3px) grayscale(100%) invert(10%);
+}
+
+.card:hover h5, .card:hover p{ 
+    filter: blur(0px);
+    transition: 2s;
+    transform: skewY(1deg);
+}
+.card:hover img {
+    opacity: 1;
+    filter: blur(0px) invert(100%);
+    transition: 2s;
+    transform: skewY(5deg);
+    
+    
+} 
+
+.card:hover #laser {
+    opacity: 1;
+    filter: blur(0px) invert(0%);
+    transition: 4s;
+    transform: skewY(10deg);
+} 
+
+#mask.card-img {
+    opacity: 0.7;
+    filter: blur(0px) grayscale(100%) invert(100%);
+}
+
+.card:hover #mask {
+    opacity: 1;
+    filter: blur(0px) invert(100%);
+    transition: 2s;
+    transform: skewY(5deg);
+} 
+
+#dani h5, #dani p {
+    filter: blur(0px);
+}
