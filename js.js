@@ -60,7 +60,7 @@ function scrollbar(){
       listG[i].style.filter = "blur(0px)";}
      
 
-      
+
       let Addition = document.getElementsByClassName('card-text')[0];
       Addition.innerHTML = ('I am here to tell you that you did find the secret!');
       
@@ -96,14 +96,14 @@ function checkStorage(){
     // letting the user know that the secret is yet to be found
     Addition.innerHTML = ('You skipped the secret');
 //removing secret skip button
-    let skip = document.getElementById('skipSecret');
-    skip.parentNode.removeChild(skip);
+removeBtn();
     
     //checking if the user has found the secret and removing skip secret button
   
   } else if (localStorage.getItem('DaniSecret') == "found"){
-    let skip = document.getElementById('skipSecret');
-    skip.parentNode.removeChild(skip);
+
+    removeBtn();
+
     let Addition = document.getElementsByClassName('card-text')[0];
     //taking away finssecret text
     Addition.innerHTML = 'But the interweb names me as Justice3000. ';
@@ -139,3 +139,8 @@ function cardTxt(){
 }
 
 //seems like im running out of time and wont be able to add unblur for my anchor links
+
+function removeBtn(){
+let skip = document.getElementById('skipSecret');
+skip.parentNode.removeChild(skip);
+}
