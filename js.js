@@ -39,6 +39,8 @@ function scrollbar(){
   audio.play();
 
   
+
+  
   document.body.style.backdropFilter = 'blur(0px) grayscale(0%)';
   
   let card = document.getElementsByClassName('card-img');
@@ -73,12 +75,9 @@ function scrollbar(){
 //very ugly and mashed function for now, because just got some tips from teacher. Shall redo code in blocks for each step.
 function bypass(){
   // here im letting user to bypass secret look and just skip to it
-  music();
+
   document.body.style.backdropFilter = 'blur(0px) grayscale(0%)'; //removing grayscale. looks like it doesnt work on mozzila
-  // also i left possibility to blur/unblur just some of the chosen areas
- 
-cardIMG();
-cardTxt();
+
 //letting user know forever if he skipped the secret
       let Addition = document.getElementsByClassName('card-text')[0];
       Addition.innerHTML = ('You skipped the secret');
@@ -124,20 +123,44 @@ function goUp() {
     let audio = new Audio('oth/drone4.mp3'); //locating music
   audio.play();//playing it
   }
-// over here just code to remove all the blur. except work timeline. im keeping it blurred
-function cardIMG(){
-  let card = document.getElementsByClassName('card-img');
-  for (let i = 0, max = card.length; i < max; i++){
-    card[i].style.opacity = "0.8"; 
-    card[i].style.filter = "invert(100%)"; 
-  }
+
+
+//seems like im running out of time and wont be able to add unblur for my anchor links
+
+getRepos();
+
+
+
+function getRepos(){
+  fetch('https://api.github.com/users/Justice3000/repos')
+  .then(response=> response.json())
+  .then(data=>{
+    sorting();
+    function sorting(){
+      data.sort(function(a,b){
+        let keyA = a.updated_at;
+        let keyB = b.updated_at;
+        if (keyA < keyB) return 1;
+        if (keyA > keyB) return -1;
+        return 0;
+    })
+    }
+    for (i=0; i<data.length; i++){
+      let gitRepo = document.getElementById('reposJSON');
+      gitRepo.insertAdjacentHTML('beforeend','<a href="'+data[i].html_url+'">'+data[i].name+'</a><br>');
+    }
+  })
 }
 
-function cardTxt(){
-  let cardText = document.getElementsByClassName('card-text');
-  for (let i = 0, max = cardText.length; i < max; i++){
-    cardText[i].style.filter = "blur(0px)";}
+
+  
+//seems like im running out of time and wont be able to add unblur for my anchor links
+
+function removeBtn(){
+let skip = document.getElementById('skipSecret');
+skip.parentNode.removeChild(skip);
 }
+
 
 //seems like im running out of time and wont be able to add unblur for my anchor links
 
@@ -145,3 +168,4 @@ function removeBtn(){
 let skip = document.getElementById('skipSecret');
 skip.parentNode.removeChild(skip);
 }
+

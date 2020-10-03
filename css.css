@@ -58,29 +58,28 @@ display: none; /* Hidden by default */
 
 .card-title{
     color: white;
-    filter: blur(3px) grayscale(100%);
-    -o-filter: blur(3px) grayscale(100%);
-    -moz-filter: blur(3px) grayscale(100%);
-    -webkit-filter: blur(3px) grayscale(100%);
+    filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -moz-filter:grayscale(100%);
+    -webkit-filter:grayscale(100%);
 }
 .card-text {
     font-size: 1.4em;
     color: whitesmoke;
-    filter: blur(3px) grayscale(100%);
+    filter:grayscale(100%);
 }
 .card-img{
     opacity: 0.5;
-    filter: blur(3px) grayscale(100%) invert(10%);
+    filter: grayscale(100%) invert(10%);
 }
 /* one of those specific pointers to unblur stuff on many elements while pointing just on one of them. Cant really tell yet if its possible to make this list shorter, because it seems that bootsrap requires pretty narrow identifiers from me to override theirs. awoiding !important at all costs*/
 .card-group:hover h5, .card-group:hover p, .card-group:hover ul, .card-group:hover li, .card-group:hover th, .card-group:hover tr, .card-group:hover td { 
-    filter: blur(0px);
     transition: 2s;
     transform: skewY(1deg);
 }
 .card-group:hover img {
     opacity: 1;
-    filter: blur(0px) invert(100%);
+    filter:invert(100%);
     transition: 2s;
     transform: skewY(5deg);
    /* down below just more specific CSS dependant on the items*/ 
@@ -89,32 +88,28 @@ display: none; /* Hidden by default */
 
 .card-group:hover #laser {
     opacity: 1;
-    filter: blur(0px) invert(0%);
+    filter:invert(0%);
     transition: 4s;
     transform: skewY(10deg);
 } 
 
 #mask.card-img {
     opacity: 0.7;
-    filter: blur(0px) grayscale(100%) invert(100%);
+    filter:grayscale(100%) invert(100%);
 }
 
 .card-group:hover #mask {
     opacity: 1;
-    filter: blur(0px) invert(100%);
+    filter:invert(100%);
     transition: 2s;
     transform: skewY(5deg);
 } 
 
-#dani h5, #dani p {
-    filter: blur(0px);
-}
 
 .list-group li {
     background-color: transparent;
     border: none;
     color: whitesmoke;
-    filter: blur(4px);
     font-size: 1.4em;
     color: whitesmoke;
 }
@@ -123,8 +118,26 @@ display: none; /* Hidden by default */
     background-color: transparent;
     border: none;
     color: whitesmoke;
-    filter: blur(4px);
     font-size: 1em;
     color: whitesmoke;
    
 }
+a{
+    color: beige;
+    
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .card-group img{
+        opacity: 1;
+        filter: invert(100%);
+    }
+    card-img{
+        opacity: 1;
+        filter: grayscale(100%) invert(100%);
+    }
+  }
+
