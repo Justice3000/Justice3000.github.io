@@ -4,16 +4,18 @@ body {
     padding: 0;
     height: 100%;
     background-color: rgb(24, 7, 24);
-    max-width: 100%;
-    background-image: url("img/stagB.webp");
-    background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
+   
+}
 
+.prlx{
+    background-image: url("img/stagB.webp");
+    height: 100%;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-   backdrop-filter: blur(3px) grayscale(80%);  /* pretty new function might be not supported in many browsers. Looks like mozzila ignores it*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ filter: grayscale(80%);  /* pretty new function might be not supported in many browsers. Looks like mozzila ignores it*/
+ 
 }
 
 .card {
@@ -139,5 +141,9 @@ a{
         opacity: 1;
         filter: grayscale(100%) invert(100%);
     }
+    .prlx {
+        background-attachment: scroll;
+      }
+
   }
 

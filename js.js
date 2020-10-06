@@ -40,8 +40,8 @@ function scrollbar(){
 
   
 
-  
-  document.body.style.backdropFilter = 'blur(0px) grayscale(0%)';
+  let prlx = document.getElementById('prlx');
+  prlx.style.filter = 'blur(0px) grayscale(0%)';
   
   let card = document.getElementsByClassName('card-img');
   for (let i = 0, max = card.length; i < max; i++){
