@@ -93,7 +93,7 @@ display: none; /* Hidden by default */
 
 #mask.card-img {
     opacity: 0.7;
-    filter:grayscale(100%) invert(100%);
+    filter:grayscale(100%) invert(100%); 
 }
 
 .card-group:hover #mask {

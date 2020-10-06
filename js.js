@@ -101,12 +101,13 @@ removeBtn();
   
   } else if (localStorage.getItem('DaniSecret') == "found"){
     document.body.style.backdropFilter = 'blur(0px) grayscale(0%)';
-    removeBtn();
+   
 
     let Addition = document.getElementsByClassName('card-text')[0];
     //taking away finssecret text
     Addition.innerHTML = 'But the interweb names me as Justice3000. ';
 //this is yet the only method yet I've learnt from WU2020
+removeBtn();
   }
 }
 
