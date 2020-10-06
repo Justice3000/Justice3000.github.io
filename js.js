@@ -40,8 +40,7 @@ function scrollbar(){
 
   
 
-  let prlx = document.getElementById('prlx');
-  prlx.style.filter = 'blur(0px) grayscale(0%)';
+ document.body.style.backdropFilter = 'blur(0px) grayscale(0%)';
   
   let card = document.getElementsByClassName('card-img');
   for (let i = 0, max = card.length; i < max; i++){
@@ -69,7 +68,7 @@ function scrollbar(){
       
       localStorage.clear();
       localStorage.setItem('DaniSecret',"found");
-      removeBtn();
+     removeBtn();
 }
 
 //very ugly and mashed function for now, because just got some tips from teacher. Shall redo code in blocks for each step.
@@ -101,7 +100,7 @@ removeBtn();
     //checking if the user has found the secret and removing skip secret button
   
   } else if (localStorage.getItem('DaniSecret') == "found"){
-
+    document.body.style.backdropFilter = 'blur(0px) grayscale(0%)';
     removeBtn();
 
     let Addition = document.getElementsByClassName('card-text')[0];
@@ -153,19 +152,13 @@ function getRepos(){
 }
 
 
-  
-//seems like im running out of time and wont be able to add unblur for my anchor links
-
-function removeBtn(){
-let skip = document.getElementById('skipSecret');
-skip.parentNode.removeChild(skip);
-}
 
 
 //seems like im running out of time and wont be able to add unblur for my anchor links
 
 function removeBtn(){
 let skip = document.getElementById('skipSecret');
+if (skip !== null)
 skip.parentNode.removeChild(skip);
 }
 
