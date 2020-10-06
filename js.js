@@ -169,3 +169,30 @@ let skip = document.getElementById('skipSecret');
 skip.parentNode.removeChild(skip);
 }
 
+getWorkHistory();
+function getWorkHistory(){
+  fetch('workHistory.json')
+  .then(response=> response.json())
+  .then(data=>{
+    sorting();
+    function sorting(){
+      data.sort(function(a,b){
+        let keyA = a.updated_at;
+        let keyB = b.updated_at;
+        if (keyA < keyB) return 1;
+        if (keyA > keyB) return -1;
+        return 0;
+    })
+    }
+    let workHistory = document.getElementById('tableG');
+    workHistory.innerHTML = '';
+    
+    
+    for (i=0; i<data.length; i++){
+     
+      workHistory.innerHTML += '<tr><td>'+data[i].yearStarted+'</td><td>'+data[i].yearEnded+'</td><td>'+data[i].titleEN+'</td><td>'+data[i].place+'</td>';
+     
+    }
+    workHistory.insertAdjacentHTML('afterbegin','<thead><tr><th scope="col">Year Started</th><th scope="col">Year Ended</th><th scope="col">Title</th><th scope="col">Place</th></tr><thead>');
+  })
+}
