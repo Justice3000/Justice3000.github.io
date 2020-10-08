@@ -1,34 +1,28 @@
 body {
- 
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: rgb(24, 7, 24);
-    background-image: url("img/stagB.webp");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-   backdrop-filter: grayscale(80%);
-   
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgb(24, 7, 24);
+  background-image: url("img/stagB.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: grayscale(80%);
 }
-
 
 .card {
-    background-color: transparent;
-    border: none;   
-
+  background-color: transparent;
+  border: none;
 }
-
-
-
 
 .navbar {
-    background-color: rgba(245, 245, 245, 0.089);
+  background-color: rgba(245, 245, 245, 0.089);
 }
 
-#upBtn { /* first time sticky button with js try. here are some annotations*/
-display: none; /* Hidden by default */
+#upBtn {
+  /* first time sticky button with js try. here are some annotations*/
+  display: none; /* Hidden by default */
   position: sticky; /* Fixed/sticky position */
   bottom: 30px; /* Place the button at the bottom of the page */
   left: 99vw; /* relative position so no worries about different devices*/
@@ -40,106 +34,103 @@ display: none; /* Hidden by default */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
-  font-size: 12px; 
+  font-size: 12px;
 }
 
 .progress-bar {
-    height: 8px;
-    background: #7e0bac8e;
-    width: 0%;
-    width: 100%;
-    position: sticky;
-    top: 0;
-  }
+  height: 8px;
+  background: #7e0bac8e;
+  width: 0%;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
 
-
-
-.card-title{
-    color: white;
-    filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    -moz-filter:grayscale(100%);
-    -webkit-filter:grayscale(100%);
+.card-title {
+  color: white;
+  filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
 .card-text {
-    font-size: 1.4em;
-    color: whitesmoke;
-    filter:grayscale(100%);
+  font-size: 1.4em;
+  color: whitesmoke;
+  filter: grayscale(100%);
 }
-.card-img{
-    opacity: 0.5;
-    filter: grayscale(100%) invert(10%);
+.card-img {
+  opacity: 0.5;
+  filter: grayscale(100%) invert(10%);
 }
 /* one of those specific pointers to unblur stuff on many elements while pointing just on one of them. Cant really tell yet if its possible to make this list shorter, because it seems that bootsrap requires pretty narrow identifiers from me to override theirs. awoiding !important at all costs*/
-.card-group:hover h5, .card-group:hover p, .card-group:hover ul, .card-group:hover li, .card-group:hover th, .card-group:hover tr, .card-group:hover td { 
-    transition: 2s;
-    transform: skewY(1deg);
+.card-group:hover h5,
+.card-group:hover p,
+.card-group:hover ul,
+.card-group:hover li,
+.card-group:hover th,
+.card-group:hover tr,
+.card-group:hover td {
+  transition: 2s;
+  transform: skewY(1deg);
 }
 .card-group:hover img {
-    opacity: 1;
-    filter:invert(100%);
-    transition: 2s;
-    transform: skewY(5deg);
-   /* down below just more specific CSS dependant on the items*/ 
-    
-} 
+  opacity: 1;
+  filter: invert(100%);
+  transition: 2s;
+  transform: skewY(5deg);
+  /* down below just more specific CSS dependant on the items*/
+}
 
 .card-group:hover #laser {
-    opacity: 1;
-    filter:invert(0%);
-    transition: 4s;
-    transform: skewY(10deg);
-} 
+  opacity: 1;
+  filter: invert(0%);
+  transition: 4s;
+  transform: skewY(10deg);
+}
 
 #mask.card-img {
-    opacity: 0.7;
-    filter:grayscale(100%) invert(100%); 
+  opacity: 0.7;
+  filter: grayscale(100%) invert(100%);
 }
 
 .card-group:hover #mask {
-    opacity: 1;
-    filter:invert(100%);
-    transition: 2s;
-    transform: skewY(5deg);
-} 
-
+  opacity: 1;
+  filter: invert(100%);
+  transition: 2s;
+  transform: skewY(5deg);
+}
 
 .list-group li {
-    background-color: transparent;
-    border: none;
-    color: whitesmoke;
-    font-size: 1.4em;
-    color: whitesmoke;
+  background-color: transparent;
+  border: none;
+  color: whitesmoke;
+  font-size: 1.4em;
+  color: whitesmoke;
 }
 
-.table th, .table tr, .table td {
-    background-color: transparent;
-    border: none;
-    color: whitesmoke;
-    font-size: 1em;
-    color: whitesmoke;
-   
+.table th,
+.table tr,
+.table td {
+  background-color: transparent;
+  border: none;
+  color: whitesmoke;
+  font-size: 1em;
+  color: whitesmoke;
 }
-a{
-    color: beige;
-    
+a {
+  color: beige;
 }
 
-
-
-
-@media only screen and (max-width: 800px) {
-    .card-group img{
-        opacity: 1;
-        filter: invert(100%);
-    }
-    card-img{
-        opacity: 1;
-        filter: grayscale(100%) invert(100%);
-    }
-    .prlx {
-        background-attachment: scroll;
-      }
-
+@media only screen and (max-width: 1200px) {
+  .card-group img {
+    opacity: 1;
+    filter: invert(100%);
   }
-
+  card-img {
+    opacity: 1;
+    filter: grayscale(100%) invert(100%);
+  }
+  .prlx {
+    background-attachment: scroll;
+  }
+}

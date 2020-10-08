@@ -35,10 +35,9 @@ function scrollbar(){
 
 // im leaving this big messy chunk as a reminder how NOT TO WRITE THE CODE. Just a gravestone for myself. Just go to bypass function for right example of the same thing
   function secretF(){
+
   let audio = new Audio('oth/drone4.mp3');
   audio.play();
-
-  
 
  document.body.style.backdropFilter = 'blur(0px) grayscale(0%)';
   
@@ -70,6 +69,8 @@ function scrollbar(){
       localStorage.setItem('DaniSecret',"found");
      removeBtn();
 }
+
+
 
 //very ugly and mashed function for now, because just got some tips from teacher. Shall redo code in blocks for each step.
 function bypass(){
