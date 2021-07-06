@@ -2,6 +2,7 @@
 import { Box, Tile, Heading, Image, Section, Notification } from 'react-bulma-components';
 import {Graphic} from './graphics';
 import './g.css'
+import img from './avatar.png'
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
               <Tile kind="parent">
                 <Tile kind="child" renderAs={Notification} color="info">
                   <Heading>Middle Tile...</Heading>
-                  <Heading subtitle>With image Tile...</Heading>
+                  <Image src={img}> </Image>
               
                 </Tile>
               </Tile>
